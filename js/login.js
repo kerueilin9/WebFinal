@@ -75,7 +75,7 @@ $signOutBtn.click(function () {
     .auth()
     .signOut()
     .then(() =>{
-        window.location = "./login.html"
+        window.location = "index.html"
     })
     .catch(err => console.log(err))
 });
