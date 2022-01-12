@@ -1,0 +1,25 @@
+body{
+    background-color:rgb(221, 57, 90);
+}
+.container1 {
+    margin:200px auto;
+    width:80%;
+}
+img{
+    width:95%;
+}
+.left{
+    float:left;
+    width:45%;
+}
+.HP{
+    font-size: 75px;
+}
+.right{
+    float:left;
+    width:54%;
+}
+
+label{
+    font-size:20px;
+}
