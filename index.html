@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Title</title>
+    <title>大樂透兌獎入口</title>
     <!-- font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <!-- bootstrap.css -->
@@ -19,30 +19,22 @@
 <body>
     <!-- navbar -->
     <nav id="navbar" class="navbar navbar-expand-sm navbar-light bg-light fixed-top">
-        <a class="navbar-brand" href="#">Website</a>
+        <a class="navbar-brand" href="#">大樂透兌獎</a>
         <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
             aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="collapsibleNavId">
             <ul class="navbar-nav ml-auto">
-
-                <!-- <li class="nav-item active">
-                    <a class="nav-link" href="./index.html">Home</a>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="modal" href="#signUpModal">註冊</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="./admin.html">Admin</a>
-                </li> -->
-
-                <li class="nav-item">
-                    <a class="nav-link" data-toggle="modal" href="#signUpModal">Sign Up</a>
+                    <a class="nav-link" href="https://www.taiwanlottery.com.tw/lotto/lotto649/history.aspx">大樂透官網</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" data-toggle="modal" href="#signInModal">Sign In</a>
+                    <a class="nav-link" href="demo.html">訪客登入</a>
                 </li>
-                <!-- <li class="nav-item">
-                    <a class="nav-link" data-toggle="modal" href="#signOutModal" href="#">Sign Out</a>
-                </li> -->
             </ul>
         </div>
     </nav>
@@ -73,7 +65,6 @@
                 </div>
                 <div class="modal-footer">
                     <a class="nav-link" data-toggle="modal" href="#signUpModal">建立新帳號</a>
-                    <!-- <button  type="button" class="btn btn-secondary" data-dismiss="modal">還沒有帳號</button> -->
                     <button type="submit" class="btn btn-primary">登入</button>
                 </div>
             </form>
@@ -81,37 +72,9 @@
         </div>
     </div>
 
-        <!-- <header id="homeHeader" class="jumbotron">
-            <div class="container">
-                <h1 class="display-4">Home Page</h1>
-                <p class="lead">Header helper text</p>
-                <div>
-                    <a href="https://getbootstrap.com/docs/4.6/getting-started/introduction/" target="_blank"
-                        class="btn btn-primary">Bootstrap</a>
-                    <a href="https://fontawesome.com/v5.15/icons?d=gallery&p=2&m=free" target="_blank"
-                        class="btn btn-success">Font awesome</a>
-                    <a href="https://firebase.google.com/" target="_blank" class="btn btn-warning">Firebase</a>
-
-                </div>
-            </div>
-        </header>
-
-        <section class="py-4">
-            <div class="container">
-                <div class="text-center mb-4">
-                    <h2 class="text-center">Product List</h2>
-                    <p>Lorem ipsum dolor sit amet.</p>
-                </div>
-                <div id="productList" class="row">
-
-                </div>
-            </div>
-        </section>
-
-        <footer id="footer" class="text-center mt-4">
-            <p>Copy right &copy; 2021</p>
-        </footer> -->
-    <!-- footer end -->
+    <!-- <footer id="footer" class="text-center mt-4">
+        <p>Copy right &copy; 2021</p>
+    </footer> --> -->
 
     <!-- signUpModal -->
     <div class="modal fade" id="signUpModal" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
@@ -119,25 +82,25 @@
         <div class="modal-dialog" role="document">
             <form id="signUpForm" class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Sign Up</h5>
+                    <h5 class="modal-title">註冊</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
                     <div class="form-group">
-                        <label for="signUpEmail">Sign up email</label>
+                        <label for="signUpEmail">電子郵件</label>
                         <input id="signUpEmail" type="email" class="form-control" placeholder="email..." required>
                     </div>
                     <div class="form-group">
-                        <label for="signUpPassword">Sign up password</label>
+                        <label for="signUpPassword">密碼</label>
                         <input id="signUpPassword" type="text" class="form-control" minlength="6"
                             placeholder="password..." required>
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary">Sign Up</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
+                    <button type="submit" class="btn btn-primary">提交</button>
                 </div>
             </form>
         </div>
@@ -167,7 +130,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary">Sign Up</button>
+                    <button type="submit" class="btn btn-primary">Sign In</button>
                 </div>
             </form>
         </div>

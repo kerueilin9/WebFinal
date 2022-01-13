@@ -24,9 +24,7 @@ $signUpForm.submit(function (e) {
         .then(res => {
             console.log("Sign up", res);
             alert("Sign up");
-            if (email == "admin@gmail.com") {
-                window.location = "./demo.html";
-            }
+            $("#signUpModal").modal('hide');
         })
         .catch(err =>{
             console.log(err);
