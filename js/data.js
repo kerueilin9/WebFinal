@@ -19,6 +19,7 @@ const $client=$("#client");
 const $sbtn=$("#sbtn");
 const $sinput=$("#sinput");
 
+const $pricerecordlist=$("priceRecordList");
 const $TableBody=$("#TableBody");
 const $chooselotto=$("#chooselotto");
 

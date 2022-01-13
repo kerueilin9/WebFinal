@@ -51,9 +51,11 @@ $signInForm.submit(function (e) {
             console.log("Sign in", res);
             alert("Sign In");
             if (email == "admin@gmail.com") {
-                window.location = "./demo.html";
+                window.location = "./admin.html";
             }
-            window.location = "./demo.html";
+            else{
+                window.location = "./user.html";
+            }           
         })
         .catch(err =>{
             console.log(err);
