@@ -7,7 +7,7 @@
         integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css" />
 </head>
-<body style="background-color:#0b0b0b;">
+<body style="background-color:rgb(209, 236, 133);">
     <!-- navbar -->
     <nav id="navbar" class="navbar navbar-expand-sm navbar-light bg-light fixed-top">
         <a class="navbar-brand" href="#">開發管理員</a>
@@ -33,7 +33,7 @@
     <section class="py-4" style="background-color: rgb(209, 236, 133);">
         <div class="container">
             <div class="text-center mb-4">
-                <h2 class="text-center">大樂透兌獎系統</h2>
+                <h2 class="text-center">開發管理者介面</h2>
             </div>
             <hr size="10px" height="10px" width="108%">
             
@@ -43,18 +43,11 @@
                     <div class="col-md col-6">
                         <div class="card my-3">
                             <div class="card-body">
-                                <h4 class="card-title mb-0">最新期的號碼</h4>
+                                <h2 class="card-title mb-0" style="text-align: center;">使用者中獎紀錄</h2>
                                 <div class="category-list my-3">
-                                    <table class="table table-hover">
-                                        <tbody id="TableBody">
-                                            <thead>
-                                                <tr>
-                                                    <th>開獎日</th>
-                                                    <th>期別</th>
-                                                    <th>號碼</th>
-                                                    <th>特別號</th>
-                                                </tr>
-                                            </thead>
+                                    <table class="table table-hover tableLarge">
+                                        <tbody id="AdminPriceList" class="tableStyle">
+
                                         </tbody>
                                     </table>
                                 </div>
@@ -62,7 +55,7 @@
                         </div>
                     </div>
                     <!---->
-                    <div class="col-md col-6">
+                    <!-- <div class="col-md col-6">
                         <div class="card my-3">
                             <div class="card-body">
                                 <h4 class="card-title mb-0">來對獎吧</h4>
@@ -90,9 +83,9 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div>-->
                 </div>
-                </div>
+            </div> 
         </div>
         <!-- footer -->
         <footer id="footer" class="text-center mt-4">
@@ -106,17 +99,17 @@
         <div class="modal-dialog" role="document">
             <div id="signInForm" class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Sign Out</h5>
+                    <h5 class="modal-title">登出</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    <p>Are you sure you want to log out ?</p>
+                    <p>確定登出？</p>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" id="signOutBtn" class="btn btn-danger">Sign Out</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
+                    <button type="button" id="signOutBtn" class="btn btn-danger">登出</button>
                 </div>
             </div>
         </div>

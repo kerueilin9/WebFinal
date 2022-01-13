@@ -19,11 +19,15 @@ const $client=$("#client");
 const $sbtn=$("#sbtn");
 const $sinput=$("#sinput");
 
-const $pricerecordlist=$("priceRecordList");
+const $adminpricelist=$("#AdminPriceList")
+const $pricebtn=$("#price-record_btn")
+const $pricerecordlist=$("#priceRecordList");
 const $TableBody=$("#TableBody");
+const $TableBody1=$("#TableBody1");
 const $chooselotto=$("#chooselotto");
 
 const lotto = db.collection("lotto2");
+const pricelist = db.collection("Price");
 
 async function getlotto(){
   const todoDocs = await lotto.get();
@@ -46,6 +50,61 @@ async function getlotto(){
   });
 }
 getlotto();
+
+async function getPriceList(){
+  const todoDocs = await pricelist.get();
+  todoDocs.forEach(id=>{
+    const temp=id.data();
+    console.log(temp);
+    const tablerow=`
+        <tr>
+          <td width="85%">${temp.price}</td>
+          <td>
+            <button data-id="${id.id}" class="btn btn-danger delete-tag-btn"> Delete</button>
+          </td>
+        </tr>
+    `;
+    $adminpricelist.append(tablerow);
+  });
+}
+
+async function UsergetPriceList(){
+  const todoDocs = await pricelist.get();
+  todoDocs.forEach(id=>{
+    const temp=id.data();
+    console.log(temp);
+    const Utablerow=`
+        <tr>
+          <td style="text-align:center; font-size:20px;">${temp.price}</td>
+        </tr>
+    `;
+    $pricerecordlist.append(Utablerow);
+  });
+}
+
+getPriceList();
+
+$('body').delegate(".delete-tag-btn", "click", function () {
+  console.log(this);
+  const tagId = $(this).attr("data-id");
+  db
+      .doc(`Price/${tagId}`)
+      .delete()
+      .then(() => {
+          alert("This tag is removed");
+          window.location.reload();
+      })
+      .catch(err => console.log(err))
+});
+
+
+$pricebtn.on('click',async(event)=>{
+  event.preventDefault();
+  $pricerecordlist.empty();;
+  // window.location.reload();
+  UsergetPriceList();
+})
+
 
 $All_number=$("#All_number");
 $money=$("#money");
@@ -141,18 +200,18 @@ $sbtn.on('click',async(event)=>{
   $sinput.val("");
 })
 
-$createtodoForm.submit(function(e){
-  // prevent default behavior of browser
-  e.preventDefault();
-  console.log("New Tag Form Submitted !");
-  const tag = {
-      title: $createtodoName.val(),
-      color: $createtodoColor.val()
-  };
-  //Add tag to tagList collection
-  db.collection("TODO").add(tag)
-      .then(() => {
-          window.location.reload();
-      })
-      .catch(err => console.log(err));
-});
+// $createtodoForm.submit(function(e){
+//   // prevent default behavior of browser
+//   e.preventDefault();
+//   console.log("New Tag Form Submitted !");
+//   const tag = {
+//       title: $createtodoName.val(),
+//       color: $createtodoColor.val()
+//   };
+//   //Add tag to tagList collection
+//   db.collection("TODO").add(tag)
+//       .then(() => {
+//           window.location.reload();
+//       })
+//       .catch(err => console.log(err));
+// });
