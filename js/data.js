@@ -199,19 +199,3 @@ $sbtn.on('click',async(event)=>{
   $chooselotto.val("");
   $sinput.val("");
 })
-
-// $createtodoForm.submit(function(e){
-//   // prevent default behavior of browser
-//   e.preventDefault();
-//   console.log("New Tag Form Submitted !");
-//   const tag = {
-//       title: $createtodoName.val(),
-//       color: $createtodoColor.val()
-//   };
-//   //Add tag to tagList collection
-//   db.collection("TODO").add(tag)
-//       .then(() => {
-//           window.location.reload();
-//       })
-//       .catch(err => console.log(err));
-// });
