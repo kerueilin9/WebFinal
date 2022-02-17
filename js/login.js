@@ -1,3 +1,8 @@
+// import { getAuth } from "firebase/auth";
+
+// const auth = getAuth();
+// const user = auth.currentUser;
+
 var $signUpForm = $("#signUpForm"),
     $signUpEmail = $("#signUpEmail"),
     $signUpPassword = $("#signUpPassword");
@@ -22,6 +27,8 @@ $signUpForm.submit(function (e) {
         .auth()
         .createUserWithEmailAndPassword(email, password)
         .then(res => {
+            // var user = firebase.auth().currentUser;
+            // console.log(user);
             console.log("Sign up", res);
             alert("Sign up");
             $("#signUpModal").modal('hide');
@@ -49,6 +56,9 @@ $signInForm.submit(function (e) {
         .signInWithEmailAndPassword(email, password)
         .then(res => {
             console.log("Sign in", res);
+            // $user = firebase.auth().currentUser;
+            // console.log($user);
+            //console.log(user);
             alert("Sign In");
             if (email == "admin@gmail.com") {
                 window.location = "./admin.html";

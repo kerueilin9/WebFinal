@@ -8,6 +8,11 @@ const firebaseConfig = {
   measurementId: "G-V1V8KEM399"
 };
 
+// import { getAuth } from "firebase/auth";
+
+// const auth = getAuth();
+// const user = auth.currentUser;
+
   // Initialize Firebase
 const app = firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
@@ -25,6 +30,16 @@ const $pricerecordlist=$("#priceRecordList");
 const $TableBody=$("#TableBody");
 const $TableBody1=$("#TableBody1");
 const $chooselotto=$("#chooselotto");
+
+// const user = await firebase.auth().createUserWithEmailAndPassword(email, password);
+// console.log(user.uid);
+
+var user = firebase.auth().currentUser;
+console.log(firebase.auth().currentUser);
+if(user){
+  console.log(user);
+}
+
 
 const lotto = db.collection("lotto2");
 const pricelist = db.collection("Price");
@@ -104,6 +119,7 @@ $pricebtn.on('click',async(event)=>{
   // window.location.reload();
   UsergetPriceList();
 })
+
 
 
 $All_number=$("#All_number");
@@ -199,3 +215,4 @@ $sbtn.on('click',async(event)=>{
   $chooselotto.val("");
   $sinput.val("");
 })
+

@@ -3,23 +3,28 @@ body{
 }
 .container1 {
     margin:200px auto;
-    width:80%;
+    max-width:1400px;
 }
 img{
     width:95%;
 }
-.left{
-    float:left;
-    width:45%;
-}
+
 .HP{
     font-size: 75px;
-}
-.right{
-    float:left;
-    width:54%;
 }
 
 label{
     font-size:20px;
+}
+
+@media screen and (min-width:768px) {
+    .container1{
+        display:flex;
+    }
+    .left{
+        width:45%;
+    }
+    .right{
+        width:54.9%;
+    }
 }
